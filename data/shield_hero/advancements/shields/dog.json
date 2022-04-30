@@ -1,0 +1,27 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Two Headed Dog Shield",
+            "color": "dark_gray",
+            "italic": true
+        },
+        "description": {
+            "text": "<abilities locked> equip bonus: alert shield special equip effect: dog bite"
+        },
+        "icon": {
+            "item": "minecraft:shield",
+            "nbt": "{CustomModelData:369007}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "skillone": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "shield_hero:root"
+}

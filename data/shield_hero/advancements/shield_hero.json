@@ -1,0 +1,18 @@
+{
+    "display": {
+        "title": "Rising of the Shield Hero",
+        "description": "Functional Shield Hero Datapack",
+        "icon": {
+            "item": "shield",
+            "nbt": "{CustomModelData:369001}"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "parent": "global:amrith",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

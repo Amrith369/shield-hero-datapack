@@ -1,0 +1,17 @@
+execute at @a[tag=shield,scores={ass=1..,sp=2..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369004}}}] run execute anchored eyes run summon minecraft:area_effect_cloud ^ ^ ^3 {Radius:2f,Duration:100,Age:0,Particle:"underwater",Tags:["as"]}
+execute at @a[tag=shield,scores={ass=1..,sp=2..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369001}}}] run execute anchored eyes run summon minecraft:area_effect_cloud ^ ^ ^3 {Radius:2f,Duration:100,Age:0,Particle:"underwater",Tags:["as"]}
+#OFFHAND LEAD
+tag @s[tag=shield,nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369004}}]}] add lead-pending
+item replace entity @s[tag=shield,nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369004}}]}] weapon.offhand with lead{display:{Name:'{"text":"Rope Shield 0/10 C","color":"gold","bold":true}',Lore:['{"text":"-Abilities Locked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 0"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;1292209216,625492818,-1149681624,283251881],Slot:"offhand"}]}
+item replace entity @s[tag=shield,nbt={SelectedItem:{id:"minecraft:lead",Count:1b,tag:{CustomModelData:369004}}}] weapon.mainhand with minecraft:shield{display:{Name:'{"text":"Rope Shield 0/10 C","color":"gold","bold":true}',Lore:['{"text":"-Abilities Locked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 0"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;1292209216,625492818,-1149681624,283251881],Slot:"mainhand"}]}
+execute at @e[tag=as,scores={counter=1}] run fill ~ ~2 ~ ~ ~ ~ lime_stained_glass replace air
+execute at @e[tag=as,scores={counter=1}] if block ~ ~ ~ cave_air run fill ~ ~2 ~ ~ ~ ~ lime_stained_glass replace cave_air
+scoreboard players remove @a[tag=shield,scores={ass=1..,sp=2..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369004}}}] sp 2
+scoreboard players remove @a[tag=shield,scores={ass=1..,sp=2..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369001}}}] sp 2
+title @a[tag=shield,scores={ass=1..,sp=30..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369004}}}] actionbar {"text":"Air Strike Shield!","color":"green","bold":true,"italic":true}
+scoreboard players add @a[scores={shieldcounter=1799,ropeprof=0..100},tag=shield] ropeprof 1
+tag @a[tag=shield,scores={ropeprof=100}] add air
+execute as @a[scores={status=1},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369004}}}] run tellraw @s ["",{"text":"Current Shield Proficiency: ","bold":true,"color":"dark_green"},{"score":{"name":"@s","objective":"ropeprof"},"bold":true,"color":"green"},{"text":"%","color":"dark_green"}]
+execute as @a[scores={take_energy=1..,ropeprof=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369004}}}] run function shield_hero:energy_reset
+execute as @a[scores={give_energy=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369004}}}] run function shield_hero:energy_reset
+#scoreboard players set @a[tag=shield,scores={status=1..}] status 0

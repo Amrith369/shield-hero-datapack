@@ -1,0 +1,33 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:shield",
+            "nbt": "{CustomModelData:369001}"
+        },
+        "title": {
+            "text": "Legendary Shield",
+            "color": "green",
+            "bold": true,
+            "italic": false
+        },
+        "description": {
+            "text": "<abilities unlocked> equip bonus: defense 3",
+            "color": "white",
+            "bold": false,
+            "italic": false
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/block/gray_concrete.png"
+    },
+    "criteria": {
+        "swordbasebase": {
+            "trigger": "minecraft:tick"
+                }
+            },
+    "rewards": {
+        "experience": 1
+    }
+}
