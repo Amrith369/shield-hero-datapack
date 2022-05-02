@@ -418,6 +418,7 @@ scoreboard players set @a[tag=shield,scores={shield_portal=1..}] shield_portal 0
 scoreboard players set @a[tag=shield,scores={shield_whale=1..}] shield_whale 0
 scoreboard players set @a[tag=shield,scores={ass=1..}] ass 0
 scoreboard players set @a[tag=shield,scores={status=1..}] status 0
+scoreboard players enable @a[tag=shield] weapon_copy
 scoreboard players enable @a[tag=shield,advancements={shield_hero:shields/leaf=true}] shield_leaf
 scoreboard players enable @a[tag=shield,advancements={shield_hero:shields/star=true}] shield_star
 scoreboard players enable @a[tag=shield,advancements={shield_hero:shields/pick=true}] shield_pick

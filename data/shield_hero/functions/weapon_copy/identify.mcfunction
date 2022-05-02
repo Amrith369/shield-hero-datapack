@@ -1,0 +1,1 @@
+say <Weapon Copy Activated>

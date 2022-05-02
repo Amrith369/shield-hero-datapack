@@ -55,6 +55,7 @@ scoreboard objectives add basic_sh trigger
 scoreboard objectives add skill-alert trigger
 scoreboard objectives add status trigger
 scoreboard objectives add status_all trigger
+scoreboard objectives add weapon_copy trigger
 scoreboard objectives add select minecraft.custom:minecraft.drop
 scoreboard objectives add ass minecraft.custom:minecraft.sneak_time
 scoreboard objectives add block minecraft.custom:minecraft.damage_blocked_by_shield
