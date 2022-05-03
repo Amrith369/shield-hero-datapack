@@ -25,7 +25,7 @@ execute as @a[tag=shield,scores={give_energy=1..}] run function shield_hero:leve
 execute as @a[tag=shield,scores={take_energy=1..}] run function shield_hero:level_up/energy_reset
 scoreboard players set @a[tag=hero,scores={alert=1..}] alert 0
 tag @a[tag=shield,tag=lead-pending,scores={shield_rope=1..}] remove lead-pending
-execute as @a[tag=shield,scores={weapon-copy=1..}] run function shield_hero:weapon_copy/identify
+execute as @a[tag=shield,scores={weapon_copy=1..}] run function shield_hero:weapon_copy/identify
 scoreboard players set @a[tag=shield,scores={weapon_copy=1..}] weapon_copy 0
 execute as @a[tag=shield] run function shield_hero:sh_shield
 #RETRIEVE SHIELD
