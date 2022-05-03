@@ -38,8 +38,8 @@ advancement grant @a[tag=shield,scores={shield_wrath=1..}] only shield_hero:shie
 tellraw @a[tag=shield,scores={absorb=1..},advancements={shield_hero:shields/soul=false},nbt={Inventory:[{id:"minecraft:ghast_tear"}]}] {"text":"Soul Eater Shield: conditions met","italic":true,"color":"gold"}
 advancement grant @a[tag=shield,scores={absorb=1..},nbt={Inventory:[{id:"minecraft:ghast_tear"}]}] only shield_hero:shields/soul
 #-Siderite Shield
-tellraw @a[tag=shield,scores={absorb=1..},advancements={shield_hero:shields/star=false},nbt={Inventory:[{id:"minecraft:conduit"}]}] {"text":"Siderite Shield: conditions met","italic":true,"color":"gold"}
-advancement grant @a[tag=shield,scores={absorb=1..},nbt={Inventory:[{id:"minecraft:conduit"}]}] only shield_hero:shields/star
+#tellraw @a[tag=shield,scores={absorb=1..},advancements={shield_hero:shields/star=false},nbt={Inventory:[{id:"minecraft:conduit"}]}] {"text":"Siderite Shield: conditions met","italic":true,"color":"gold"}
+#advancement grant @a[tag=shield,scores={absorb=1..},nbt={Inventory:[{id:"minecraft:conduit"}]}] only shield_hero:shields/star
 #-Portal Shield
 tellraw @a[tag=shield,scores={absorb=1..},advancements={shield_hero:shields/portal=false},nbt={Inventory:[{id:"minecraft:redstone"}]}] {"text":"Dragon Hourglass Sand Shield: conditions met","italic":true,"color":"gold"}
 advancement grant @a[tag=shield,scores={absorb=1..},nbt={Inventory:[{id:"minecraft:redstone"}]}] only shield_hero:shields/portal
