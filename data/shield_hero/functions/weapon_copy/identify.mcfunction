@@ -1,2 +1,4 @@
 tellraw @a[tag=shield,scores={weapon_copy=1..},advancements={shield_hero:shields/star=false},nbt={Inventory:[{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369011}}]}] {"text":"Weapon Copy: Siderite Shield Acquired","italic":true,"color":"gold"}
 advancement grant @a[tag=shield,scores={weapon_copy=1..},advancements={shield_hero:shields/star=false},nbt={Inventory:[{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369011}}]}] only shield_hero:shields/star
+tellraw @a[tag=shield,scores={weapon_copy=1..},advancements={shield_hero:shields/wooden=false},nbt={Inventory:[{id:"minecraft:shield",Count:1b}]}] {"text":"Weapon Copy: Wooden Shield Acquired","italic":true,"color":"gold"}
+advancement grant @a[tag=shield,scores={weapon_copy=1..},advancements={shield_hero:shields/wooden=false},nbt={Inventory:[{id:"minecraft:shield",Count:1b}]}] only shield_hero:shields/wooden
