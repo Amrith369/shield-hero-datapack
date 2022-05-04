@@ -27,6 +27,7 @@ scoreboard objectives add staroff trigger
 scoreboard objectives add skill-bubble trigger
 scoreboard objectives add sp dummy
 scoreboard objectives add starCounter dummy
+scoreboard objectives add skill-hate-reaction trigger
 scoreboard objectives add shield_leaf trigger
 scoreboard objectives add check_energy trigger
 scoreboard objectives add take_energy trigger

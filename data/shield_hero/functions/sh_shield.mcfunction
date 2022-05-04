@@ -380,6 +380,10 @@ tag @e[scores={skillcounter=200..}] remove maidenlock
 tag @e[scores={skillcounter=66..}] remove bloodlock
 #scoreboard players set @e[scores={skillcounter=66..}] skillcounter 0
 scoreboard players reset @e[scores={skillcounter=200..}]
+#WOODEN SHIELD
+execute as @a[scores={skill-hate-reaction=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}}] run function shield_hero:abilities/hate
+execute as @a[scores={skill-hate-reaction=1..},nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}]}] run function shield_hero:abilities/hate
+execute as @a[scores={skill-hate-reaction=1..,woodenprof=100..}] run function shield_hero:abilities/hate
 #SMELT
 execute as @a[scores={smelt=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369002}}}] run function shield_hero:level_up/smelt
 execute as @a[scores={smelt=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369003}}}] run function shield_hero:level_up/smelting-pickax
@@ -416,6 +420,7 @@ scoreboard players set @a[tag=shield,scores={shield_soul=1..}] shield_soul 0
 scoreboard players set @a[tag=shield,scores={shield_star=1..}] shield_star 0
 scoreboard players set @a[tag=shield,scores={shield_portal=1..}] shield_portal 0
 scoreboard players set @a[tag=shield,scores={shield_whale=1..}] shield_whale 0
+scoreboard players set @a[tag=shield,scores={shield_wooden=1..}] shield_wooden 0
 scoreboard players set @a[tag=shield,scores={ass=1..}] ass 0
 scoreboard players set @a[tag=shield,scores={status=1..}] status 0
 scoreboard players enable @a[tag=shield] weapon_copy
@@ -434,6 +439,7 @@ scoreboard players enable @a[tag=shield] craft_hp_potion
 scoreboard players enable @a[tag=shield] give_energy
 scoreboard players enable @a[tag=shield] take_energy
 scoreboard players enable @a[tag=shield] check_energy
+scoreboard players enable @a[tag=shield,advancements={shield_hero:shields/wooden=true}] shield_wooden
 scoreboard players enable @a[tag=shield,advancements={shield_hero:shields/rope=true}] shield_rope
 scoreboard players enable @a[tag=shield,advancements={shield_hero:shields/pipe=true}] shield_pipe
 scoreboard players enable @a[tag=shield,advancements={shield_hero:shields/ltm=true}] shield_ltm
