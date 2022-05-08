@@ -18,6 +18,7 @@ scoreboard objectives add star_smelt dummy
 scoreboard objectives add viper_smelt dummy
 scoreboard objectives add whale_smelt dummy
 scoreboard objectives add wrath_smelt dummy
+scoreboard objectives add wooden_smelt dummy
 scoreboard objectives add craft_sp_potion trigger
 scoreboard objectives add craft_hp_potion trigger
 scoreboard objectives add smelt trigger
@@ -47,6 +48,7 @@ scoreboard objectives add shield_pipe trigger
 scoreboard objectives add shield_ltm trigger
 scoreboard objectives add shield_viper trigger
 scoreboard objectives add shield_wrath trigger
+scoreboard objectives add shield_wooden trigger
 scoreboard objectives add maiden trigger
 scoreboard objectives add blood trigger
 scoreboard objectives add shield_soul trigger
@@ -76,6 +78,7 @@ scoreboard objectives add viperprof dummy
 scoreboard objectives add wrathprof dummy
 scoreboard objectives add soulprof dummy
 scoreboard objectives add starprof dummy
+scoreboard objectives add woodenprof dummy
 scoreboard objectives add timer dummy
 scoreboard objectives add starx1 dummy
 scoreboard objectives add stary1 dummy
