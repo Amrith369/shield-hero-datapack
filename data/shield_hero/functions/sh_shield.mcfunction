@@ -424,6 +424,8 @@ scoreboard players reset @e[scores={skillcounter=200..}]
 execute as @a[scores={skill-hate-reaction=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}}] run function shield_hero:abilities/hate
 execute as @a[scores={skill-hate-reaction=1..},nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}]}] run function shield_hero:abilities/hate
 execute as @a[scores={skill-hate-reaction=1..,woodenprof=100..}] run function shield_hero:abilities/hate
+execute as @a[nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}}] run function shield_hero:level_up/woodenprof
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}]}] run function shield_hero:level_up/woodenprof
 #SMELT
 execute as @a[scores={smelt=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369002}}}] run function shield_hero:level_up/smelt
 execute as @a[scores={smelt=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369003}}}] run function shield_hero:level_up/smelting-pickax

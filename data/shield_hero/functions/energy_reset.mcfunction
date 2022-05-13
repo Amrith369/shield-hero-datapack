@@ -107,6 +107,15 @@ scoreboard players add @a[scores={give_energy=1..,shield_ep=20..,wrathprof=..100
 scoreboard players remove @a[scores={give_energy=1..,shield_ep=20..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] shield_ep 20
 scoreboard players remove @a[scores={give_energy=1..,shield_ep=20..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] give_energy 1
 scoreboard players set @a[scores={give_energy=1..,shield_ep=..19},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] give_energy 0
+#STAR
+scoreboard players add @a[scores={take_energy=1..,woodenprof=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}}] shield_ep 20
+scoreboard players remove @a[scores={take_energy=1..,woodenprof=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}}] woodenprof 1
+scoreboard players remove @a[scores={take_energy=1..,woodenprof=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}}] take_energy 1
+scoreboard players set @a[scores={take_energy=1..,woodenprof=0},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}}] take_energy 0
+scoreboard players add @a[scores={give_energy=1..,shield_ep=20..,woodenprof=..1000},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}}] woodenprof 1
+scoreboard players remove @a[scores={give_energy=1..,shield_ep=20..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}}] shield_ep 20
+scoreboard players remove @a[scores={give_energy=1..,shield_ep=20..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}}] give_energy 1
+scoreboard players set @a[scores={give_energy=1..,shield_ep=..19},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}}] give_energy 0
 #Messages
 execute as @a[tag=shield,scores={give_energy=1..}] run title @s[tag=shield] actionbar [{"text":"Imbuing Energy Points...","color":"aqua"}]
 execute as @a[tag=shield,scores={take_energy=1..}] run title @s[tag=shield] actionbar [{"text":"Resetting Proficiency...","color":"gold"}]
