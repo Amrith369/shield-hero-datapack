@@ -403,6 +403,7 @@ execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{Cu
 #-Whale Shield
 execute as @a[nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369013}}}] run function shield_hero:whale
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369013}}]}] run function shield_hero:whale
+execute as @a[scores={block=1..,whaleprof=100..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369013}}}] run function shield_hero:abilities/whale-beam
 #-Wrath Shield
 execute as @a[nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run function shield_hero:wrath
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}]}] run function shield_hero:wrath
