@@ -413,7 +413,7 @@ scoreboard players add @e[tag=curse_select] counter 1
 scoreboard players add @e[tag=selected] counter 1
 kill @e[tag=curse_select,scores={counter=1..}]
 tag @e[tag=selected,scores={counter=80..}] remove selected
-scoreboard players set @e[tag=!dark_gas,scores={counter=80..}] counter 0
+scoreboard players set @e[tag=!shield.longer,scores={counter=80..}] counter 0
 #WOODEN SHIELD
 execute as @a[scores={skill-hate-reaction=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}}] run function shield_hero:abilities/hate
 execute as @a[scores={skill-hate-reaction=1..},nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}]}] run function shield_hero:abilities/hate

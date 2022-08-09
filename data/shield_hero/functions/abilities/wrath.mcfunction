@@ -1,5 +1,5 @@
 #-Wrath Shield
-execute at @a[scores={block=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run summon minecraft:bat ^ ^0.5 ^2 {Silent:1,Invulnerable:1b,Tags:["dark_gas"],ActiveEffects:[{Id:14b,Amplifier:2b,Duration:400,ShowParticles:1b}]}
+execute at @a[scores={block=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run summon minecraft:bat ^ ^0.5 ^2 {Silent:1,Invulnerable:1b,Tags:["dark_gas","shield.longer"],ActiveEffects:[{Id:14b,Amplifier:2b,Duration:400,ShowParticles:1b}]}
 execute at @a[scores={block=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run playsound minecraft:block.fire.ambient ambient @a[distance=0..12] ~ ~ ~ 20 2
 execute at @e[tag=dark_gas] run effect give @e[distance=1..3,tag=!wrath] wither 10 1
 execute at @e[tag=dark_gas] run execute as @e[distance=1..2,tag=!wrath,type=!bat] run data merge entity @s {Fire:300}
@@ -23,3 +23,9 @@ execute as @e[tag=selected] run execute as @a[tag=shield] run title @a[tag=shiel
 #execute at @e[tag=selected,scores={counter=60..}] if entity @a[tag=shield,x_rotation=18..90,scores={sp=50..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run function shield_hero:abilities:blood
 execute at @a[tag=shield,x_rotation=-90..-18,scores={sp=50..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run execute as @e[tag=selected,scores={counter=60}] run function shield_hero:abilities/maiden
 execute at @a[tag=shield,x_rotation=18..90,scores={sp=50..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run execute as @e[tag=selected,scores={counter=60}] run function shield_hero:abilities/blood
+#Proficiency
+scoreboard players add @a[scores={shieldcounter=1799,wrathprof=0..100},tag=shield] wrathprof 1
+execute as @a[scores={status=1},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run tellraw @s ["",{"text":"Current Shield Proficiency: ","bold":true,"color":"dark_red"},{"score":{"name":"@s","objective":"wrathprof"},"bold":true,"color":"red"},{"text":"%","color":"dark_red"}]
+execute as @a[scores={take_energy=1..,wrathprof=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run function shield_hero:energy_reset
+execute as @a[scores={give_energy=1..,shield_ep=20..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run function shield_hero:energy_reset
+#scoreboard players set @a[tag=shield,scores={status=1..}] status 0
