@@ -10,6 +10,11 @@ scoreboard players add @a[tag=shield] shieldcounter 1
 scoreboard players set @a[tag=shield,scores={shieldcounter=1800..}] shieldcounter 0
 effect give @a[tag=mine] haste 2 3 true
 effect clear @a[tag=snake] poison
+execute as @e[tag=aj.maiden] run function shield_hero:abilities/maiden-effects
+execute as @e[tag=aj.blutopher] run function shield_hero:abilities/blood-effects
+#WRATH
+scoreboard players add @e[tag=skill-select] counter 1
+tp @e[tag=skill-select,scores={counter=10}] ~ ~-400 ~
 scoreboard players remove @a[scores={timer=1..601},advancements={shield_hero:shields/wrath=true}] timer 1
 execute as @a[scores={timer=1..2},advancements={shield_hero:shields/wrath=true}] run function shield_hero:heal
 execute as @a[tag=shield,scores={status_all=1..}] run function shield_hero:level_up/status_all

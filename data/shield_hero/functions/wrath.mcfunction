@@ -1,7 +1,7 @@
 #-Wrath Shield
 execute at @a[scores={block=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run summon minecraft:bat ^ ^0.5 ^2 {Silent:1,Invulnerable:1b,Tags:["dark_gas"],ActiveEffects:[{Id:14b,Amplifier:2b,Duration:400,ShowParticles:1b}]}
 execute at @a[scores={block=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run playsound minecraft:block.fire.ambient ambient @a[distance=0..12] ~ ~ ~ 20 2
-execute at @e[tag=dark_gas] run effect give @e[distance=1..3,tag=!wrath] wither 20 2
+execute at @e[tag=dark_gas] run effect give @e[distance=1..3,tag=!wrath] wither 20 1
 execute at @e[tag=dark_gas] run execute as @e[distance=1..2,tag=!wrath,type=!bat] run data merge entity @s {Fire:300}
 #tellraw @a[scores={block=1..},tag=shield,advancements={shield_hero:shields/wrath=true},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] [{"text":"Dark Gas Burning!","color":"red","bold":true,"italic":true}]
 execute as @a[scores={block=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run title @s actionbar {"text":"Dark Curse Burning!","color":"red","bold":true,"italic":true}
@@ -15,22 +15,11 @@ execute at @a[scores={ass=1..,sp=50..},nbt={SelectedItem:{id:"minecraft:shield",
 execute at @e[tag=curse_select] run scoreboard players set @e[distance=0,scores={counter=80..}] counter 0
 execute at @e[tag=selected] run kill @e[tag=curse_select]
 execute at @e[tag=curse_select] run tag @e[limit=1,distance=0..3,tag=!wrath,type=!#shield_hero:exclude] add selected
-execute at @e[tag=selected,scores={counter=1}] run tellraw @a[distance=0..20,advancements={shield_hero:shields/wrath=true}] {"text":"IRON MAIDEN","bold":true,"color":"red","clickEvent":{"action":"run_command","value":"/trigger maiden add 1"}}
-execute at @e[tag=selected,scores={counter=1}] run tellraw @a[distance=0..20,advancements={shield_hero:shields/wrath=true}] {"text":"BLOOD SACRIFICE","bold":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/trigger blood add 1"}}
 execute at @e[tag=curse_select] run effect give @e[limit=1,distance=0..3,tag=!wrath] glowing 7 4 true
+execute as @e[tag=selected] run execute at @a[tag=shield,nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run summon villager ^ ^.5 ^2 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["skill-select"],ArmorItems:[{},{},{},{id:"minecraft:brick",Count:1b,tag:{CustomModelData:369015}}],ActiveEffects:[{Id:14,Amplifier:1b,Duration:100000,ShowParticles:0b}]}
+scoreboard players add @e[tag=skill-select] counter 1
 execute at @a[scores={maiden=1..},advancements={shield_hero:shields/wrath=true}] run tag @e[tag=selected] add maidenlock
-scoreboard players set @a[advancements={shield_hero:shields/wrath=true},scores={maiden=1..,sp=50..}] sp 0
-#tellraw @a[advancements={shield_hero:shields/wrath=true},scores={maiden=1..,sp=..49}] {"text":"You Do Not Have Enough SP!","bold":true,"color":"#F53D3D","hoverEvent":{"action":"show_text","contents":{"text":"SP is below 50. Wait for it to recharge!","color":"#E0FFE7"}}}
-#tellraw @a[advancements={shield_hero:shields/wrath=true},scores={blood=1..,sp=..49}] {"text":"You Do Not Have Enough SP!","bold":true,"color":"#F53D3D","hoverEvent":{"action":"show_text","contents":{"text":"SP is below 50. Wait for it to recharge!","color":"#E0FFE7"}}}
-execute at @e[tag=maidenlock,scores={skillcounter=0..1}] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["maidenobject"],ArmorItems:[{},{},{},{id:"minecraft:brick",Count:1b,tag:{CustomModelData:369001}}]}
-execute at @e[tag=maidenlock,scores={skillcounter=0..1}] run summon lightning_bolt ~ ~30 ~
-execute at @e[tag=maidenobject] run tp @e[tag=maidenlock,distance=0..20] ~ ~ ~
-execute at @e[tag=maidenlock,scores={skillcounter=5}] run item replace entity @e[type=minecraft:armor_stand,tag=maidenobject,distance=0..5] armor.head with brick{CustomModelData:369002}
-execute at @e[tag=maidenlock,scores={skillcounter=10}] run item replace entity @e[type=minecraft:armor_stand,tag=maidenobject,distance=0..5] armor.head with brick{CustomModelData:369003}
-execute at @e[tag=maidenlock,scores={skillcounter=4..30}] run summon minecraft:firework_rocket ~ ~ ~ {LifeTime:1,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Colors:[I;16711680,7012352],FadeColors:[I;2228038]}]}}}}
-execute at @e[tag=maidenlock,scores={skillcounter=2}] run tellraw @a[scores={maiden=1..},tag=shield,advancements={shield_hero:shields/wrath=true},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] {"text":"Cry out in anguish as your entire body is stabbed and skewered!","color":"red","bold":true,"italic":true}
-execute at @e[tag=maidenlock,scores={skillcounter=22}] run tellraw @a[scores={maiden=1..},tag=shield,advancements={shield_hero:shields/wrath=true},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] {"text":"Iron Maiden!","color":"red","bold":true,"italic":true}
-execute at @a[scores={blood=1..},advancements={shield_hero:shields/wrath=true}] run tag @e[tag=selected] add bloodlock
+
 effect give @a[scores={blood=1..},advancements={shield_hero:shields/wrath=true}] nausea 60 6
 effect give @a[scores={blood=1..},advancements={shield_hero:shields/wrath=true}] hunger 600 6
 effect give @a[scores={blood=1..},advancements={shield_hero:shields/wrath=true}] slowness 600 3

@@ -1,0 +1,109 @@
+#Comment
+function fafik77:rng/init
+#bossbar remove sp "SP"
+#bossbar set minecraft:sp max 300
+bossbar remove minecraft:sp
+scoreboard objectives remove a_coords dummy
+scoreboard objectives remove b_coords dummy
+scoreboard objectives remove c_coords dummy
+scoreboard objectives remove leaf_smelt dummy
+scoreboard objectives remove rope_smelt dummy
+scoreboard objectives remove dog_smelt dummy
+scoreboard objectives remove ltm_smelt dummy
+scoreboard objectives remove pick_smelt dummy
+scoreboard objectives remove pipe_smelt dummy
+scoreboard objectives remove portal_smelt dummy
+scoreboard objectives remove soul_smelt dummy
+scoreboard objectives remove star_smelt dummy
+scoreboard objectives remove viper_smelt dummy
+scoreboard objectives remove whale_smelt dummy
+scoreboard objectives remove wrath_smelt dummy
+scoreboard objectives remove wooden_smelt dummy
+scoreboard objectives remove craft_sp_potion trigger
+scoreboard objectives remove craft_hp_potion trigger
+scoreboard objectives remove smelt trigger
+scoreboard objectives remove party trigger
+scoreboard objectives remove disband trigger
+scoreboard objectives remove staroff trigger
+scoreboard objectives remove skill-bubble trigger
+scoreboard objectives remove sp dummy
+scoreboard objectives remove starCounter dummy
+scoreboard objectives remove skill-hate-reaction trigger
+scoreboard objectives remove shield_leaf trigger
+scoreboard objectives remove check_energy trigger
+scoreboard objectives remove take_energy trigger
+scoreboard objectives remove give_energy trigger
+scoreboard objectives remove shield_portal trigger
+scoreboard objectives remove shield_whale trigger
+scoreboard objectives remove set_warp_a trigger
+scoreboard objectives remove set_warp_b trigger
+scoreboard objectives remove set_warp_c trigger
+scoreboard objectives remove warp_a trigger
+scoreboard objectives remove warp_b trigger
+scoreboard objectives remove warp_c trigger
+scoreboard objectives remove shield_dog trigger
+scoreboard objectives remove shield_pick trigger
+scoreboard objectives remove shield_rope trigger
+scoreboard objectives remove shield_pipe trigger
+scoreboard objectives remove shield_ltm trigger
+scoreboard objectives remove shield_viper trigger
+scoreboard objectives remove shield_wrath trigger
+scoreboard objectives remove shield_wooden trigger
+scoreboard objectives remove maiden trigger
+scoreboard objectives remove blood trigger
+scoreboard objectives remove shield_soul trigger
+scoreboard objectives remove shield_star trigger
+scoreboard objectives remove absorb trigger
+scoreboard objectives remove basic_sh trigger
+scoreboard objectives remove skill-alert trigger
+scoreboard objectives remove status trigger
+scoreboard objectives remove status_all trigger
+scoreboard objectives remove weapon_copy trigger
+scoreboard objectives remove select minecraft.custom:minecraft.drop
+scoreboard objectives remove ass minecraft.custom:minecraft.sneak_time
+scoreboard objectives remove block minecraft.custom:minecraft.damage_blocked_by_shield
+scoreboard objectives remove counter dummy
+scoreboard objectives remove skillcounter dummy
+scoreboard objectives remove shield_ep dummy
+scoreboard objectives remove shieldcounter dummy
+scoreboard objectives remove leafprof dummy
+scoreboard objectives remove portalprof dummy
+scoreboard objectives remove whaleprof dummy
+scoreboard objectives remove dogprof dummy
+scoreboard objectives remove pickprof dummy
+scoreboard objectives remove ropeprof dummy
+scoreboard objectives remove pipeprof dummy
+scoreboard objectives remove ltmprof dummy
+scoreboard objectives remove viperprof dummy
+scoreboard objectives remove wrathprof dummy
+scoreboard objectives remove soulprof dummy
+scoreboard objectives remove starprof dummy
+scoreboard objectives remove woodenprof dummy
+scoreboard objectives remove timer dummy
+scoreboard objectives remove starx1 dummy
+scoreboard objectives remove stary1 dummy
+scoreboard objectives remove starz1 dummy
+scoreboard objectives remove starx2 dummy
+scoreboard objectives remove stary2 dummy
+scoreboard objectives remove starz2 dummy
+scoreboard objectives remove point_a_warp
+scoreboard objectives remove point_b_warp
+scoreboard objectives remove point_a
+scoreboard objectives remove point_b
+scoreboard objectives remove stat-counter dummy
+scoreboard objectives remove grassbreak minecraft.mined:minecraft.grass
+scoreboard objectives remove wheatbreak minecraft.mined:minecraft.wheat
+scoreboard objectives remove carrotbreak minecraft.mined:minecraft.carrots
+scoreboard objectives remove potatobreak minecraft.mined:minecraft.potatoes
+scoreboard objectives remove beetbreak minecraft.mined:minecraft.beetroots
+scoreboard objectives remove ironbreak minecraft.mined:minecraft.iron_ore
+scoreboard objectives remove ironbreakii minecraft.mined:minecraft.deepslate_iron_ore
+scoreboard objectives remove goldbreak minecraft.mined:minecraft.gold_ore
+scoreboard objectives remove goldbreakii minecraft.mined:minecraft.deepslate_gold_ore
+scoreboard objectives remove diamondbreak minecraft.mined:minecraft.diamond_ore
+scoreboard objectives remove diamondbreakii minecraft.mined:minecraft.deepslate_diamond_ore
+scoreboard objectives remove netherbreak minecraft.mined:minecraft.ancient_debris
+#gamerule sendCommandFeedback false
+tellraw @a ["",{"text":"["},{"text":"Rising Of The Shield Hero","color":"green"},{"text":"] Datapack Successfully Uninstalled!"}]
+scoreboard objectives remove sleep-prof minecraft.custom:minecraft.sleep_in_bed
+scoreboard objectives remove sleep-counter dummy

@@ -97,8 +97,11 @@ scoreboard objectives add carrotbreak minecraft.mined:minecraft.carrots
 scoreboard objectives add potatobreak minecraft.mined:minecraft.potatoes
 scoreboard objectives add beetbreak minecraft.mined:minecraft.beetroots
 scoreboard objectives add ironbreak minecraft.mined:minecraft.iron_ore
+scoreboard objectives add ironbreakii minecraft.mined:minecraft.deepslate_iron_ore
 scoreboard objectives add goldbreak minecraft.mined:minecraft.gold_ore
+scoreboard objectives add goldbreakii minecraft.mined:minecraft.deepslate_gold_ore
 scoreboard objectives add diamondbreak minecraft.mined:minecraft.diamond_ore
+scoreboard objectives add diamondbreakii minecraft.mined:minecraft.deepslate_diamond_ore
 scoreboard objectives add netherbreak minecraft.mined:minecraft.ancient_debris
 #gamerule sendCommandFeedback false
 #tellraw @a ["",{"text":"["},{"text":"Rising Of The Shield Hero","color":"green"},{"text":"] Datapack Successfully Loaded!"}]

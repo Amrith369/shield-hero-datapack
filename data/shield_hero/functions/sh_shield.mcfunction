@@ -405,22 +405,15 @@ execute as @a[nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModel
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369013}}]}] run function shield_hero:whale
 execute as @a[scores={block=1..,whaleprof=100..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369013}}}] run function shield_hero:abilities/whale-beam
 #-Wrath Shield
-execute as @a[nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run function shield_hero:wrath
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}]}] run function shield_hero:wrath
+execute as @a[nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run function shield_hero:abilities/wrath
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}]}] run function shield_hero:abilities/wrath
 scoreboard players add @e[tag=dark_gas] counter 1
 kill @e[tag=dark_gas,scores={counter=100..}]
 scoreboard players add @e[tag=curse_select] counter 1
 scoreboard players add @e[tag=selected] counter 1
 kill @e[tag=curse_select,scores={counter=1..}]
 tag @e[tag=selected,scores={counter=80..}] remove selected
-scoreboard players add @e[tag=maidenlock] skillcounter 1
-scoreboard players add @e[tag=maidentimer] skillcounter 1
-scoreboard players add @e[tag=bloodlock] skillcounter 1
-scoreboard players add @e[tag=bloodtimer] skillcounter 1
-tag @e[scores={skillcounter=200..}] remove maidenlock
-tag @e[scores={skillcounter=66..}] remove bloodlock
-#scoreboard players set @e[scores={skillcounter=66..}] skillcounter 0
-scoreboard players reset @e[scores={skillcounter=200..}]
+scoreboard players set @e[tag=!dark_gas,scores={counter=80..}] counter 0
 #WOODEN SHIELD
 execute as @a[scores={skill-hate-reaction=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}}] run function shield_hero:abilities/hate
 execute as @a[scores={skill-hate-reaction=1..},nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}]}] run function shield_hero:abilities/hate
@@ -448,6 +441,10 @@ scoreboard players add @a[tag=shield,scores={sp=..300},nbt={AbsorptionAmount:20f
 clear @a[tag=shield,nbt={AbsorptionAmount:20f}] glass_bottle 1
 clear @a[tag=shield,nbt={AbsorptionAmount:24f}] glass_bottle 1
 #Reset Scores
+scoreboard players add @e[tag=aj.maiden] maiden 1
+kill @e[tag=aj.maiden,scores={maiden=100..}]
+scoreboard players add @e[tag=aj.blutopher] blood 1
+kill @e[tag=aj.blutopher,scores={blood=100..}]
 scoreboard players set @a[tag=shield,scores={shield_leaf=1..}] shield_leaf 0
 scoreboard players set @a[tag=shield,scores={basic_sh=1..}] basic_sh 0
 scoreboard players set @a[tag=shield,scores={shield_pick=1..}] shield_pick 0
