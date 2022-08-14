@@ -355,9 +355,9 @@ execute as @a[tag=shield,scores={basic_sh=1..}] run clear @s shield
 execute as @a[tag=shield,scores={basic_sh=1..}] run tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
 execute as @a[tag=shield,scores={basic_sh=1..}] run give @s minecraft:shield{display:{Name:'{"text":"Legendary Shield","color":"gold","bold":true}',Lore:['{"text":"-Abilities Unlocked-","italic":true}','{"text":"Equip Bonus: defense 3"}']},HideFlags:1,Unbreakable:1b,CustomModelData:369001,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUIDLeast:790722,UUIDMost:572480,Slot:"mainhand"}]} 1
 #------------Party System--------------------
-execute as @a[tag=shield,scores={party=1..}] run execute at @s run tag @e[distance=1..2] add shield-party
-execute as @a[tag=shield,scores={party=1..}] run execute at @e[tag=shield-party] run tellraw @a[tag=shield,scores={party=1..}] ["",{"text":"[Notice] ","bold":true,"color":"green"},{"selector":"@e[tag=shield-party,limit=1,sort=nearest]","bold":true,"color":"white"},{"text":" Has Joined Your Party!","bold":true,"color":"green"}]
-execute as @a[tag=shield,scores={disband=1..}] run execute at @s run tag @e[tag=shield-party] remove shield-party
+execute as @a[tag=shield,scores={party=1..}] run execute at @s run tag @e[distance=1..2] add shield.party
+execute as @a[tag=shield,scores={party=1..}] run execute at @e[tag=shield.party] run tellraw @a[tag=shield,scores={party=1..}] ["",{"text":"[Notice] ","bold":true,"color":"green"},{"selector":"@e[tag=shield.party,limit=1,sort=nearest]","bold":true,"color":"white"},{"text":" Has Joined Your Party!","bold":true,"color":"green"}]
+execute as @a[tag=shield,scores={disband=1..}] run execute at @s run tag @e[tag=shield.party] remove shield.party
 scoreboard players set @a[tag=shield,scores={party=1..}] party 0
 scoreboard players set @a[tag=shield,scores={disband=1..}] disband 0
 scoreboard players set @a[tag=shield,scores={staroff=1..}] starCounter 0

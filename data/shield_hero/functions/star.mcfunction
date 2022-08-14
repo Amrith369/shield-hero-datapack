@@ -13,11 +13,11 @@ execute at @a[tag=shield,scores={starCounter=1..}] run kill @e[distance=0..3,typ
 execute at @a[tag=shield,scores={starCounter=1..}] run kill @e[distance=0..3,type=wither_skull]
 #execute at @a[tag=shield,scores={ass=1..,sp=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369011}}}] run effect give @e[distance =1..3] slowness 3 50 true
 #execute at @a[tag=shield,scores={ass=1..,sp=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369011}}}] run effect give @e[distance =1..4,type=!player] jump_boost 3 150 true
-execute at @a[tag=shield,scores={starCounter=1..}] run execute at @e[distance=1..5,tag=!shield-party] run scoreboard players remove @a[tag=shield,scores={starCounter=1..}] starCounter 1
+execute at @a[tag=shield,scores={starCounter=1..}] run execute at @e[distance=1..5,tag=!shield.party] run scoreboard players remove @a[tag=shield,scores={starCounter=1..}] starCounter 1
 execute at @a[tag=shield,scores={starCounter=1..}] run execute at @e[distance=1..5,tag=air_throw] run scoreboard players remove @a[tag=shield,scores={starCounter=1..}] starCounter 10
 #PUSH ENITIES BACK
-execute at @a[tag=shield,scores={starCounter=1..}] run execute as @a[distance=1..5,tag=!shield-party] run execute at @s if block ^ ^1 ^-1 air run tp @s ^ ^ ^-1
-execute at @s[scores={starCounter=1..}] run execute as @e[type=!minecraft:item_frame,type=!area_effect_cloud,distance=1..5,tag=!shield-party] run function shield_hero:star-pushback
+execute at @a[tag=shield,scores={starCounter=1..}] run execute as @a[distance=1..5,tag=!shield.party] run execute at @s if block ^ ^1 ^-1 air run tp @s ^ ^ ^-1
+execute at @s[scores={starCounter=1..}] run execute as @e[type=!minecraft:item_frame,type=!area_effect_cloud,distance=1..5,tag=!shield.party] run function shield_hero:star-pushback
 #SPEAR INTERACTIONS
 execute at @a[tag=shield,scores={starCounter=1..}] run execute at @e[tag=air_throw] run particle minecraft:explosion_emitter ~ ~ ~ 0 0 0 1 1
 execute at @a[tag=shield,scores={starCounter=1..}] run execute at @e[tag=air_throw] run playsound minecraft:item.axe.scrape hostile @a[distance=0..10] ~ ~ ~ 10
