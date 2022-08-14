@@ -5,6 +5,7 @@ attribute @a[limit=1,tag=shield,tag=!starto] minecraft:generic.attack_damage bas
 attribute @a[limit=1,tag=shield,tag=!starto] minecraft:generic.max_health base set 40
 tag @a[tag=shield,tag=!starto] add starto
 tag @a[tag=shield] add hero
+tag @a[tag=shield] add shield.party
 scoreboard players add @a[tag=shield] stat-counter 1
 tag @a[tag=shield,scores={stat-counter=6000..}] remove starto
 scoreboard players set @a[tag=shield,scores={stat-counter=6001..}] stat-counter 0
