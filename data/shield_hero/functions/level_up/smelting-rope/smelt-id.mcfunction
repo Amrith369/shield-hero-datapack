@@ -1,0 +1,11 @@
+execute as @a[scores={smelt=1..,rope_smelt=0},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{shh:1b,CustomModelData:369002}}}] run function shield_hero:level_up/smelting-rope/smelting_rope-1
+execute as @a[scores={smelt=1..,rope_smelt=1},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{shh:1b,CustomModelData:369002}}}] run function shield_hero:level_up/smelting-rope/smelting_rope-2
+execute as @a[scores={smelt=1..,rope_smelt=2},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{shh:1b,CustomModelData:369002}}}] run function shield_hero:level_up/smelting-rope/smelting_rope-3
+execute as @a[scores={smelt=1..,rope_smelt=3},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{shh:1b,CustomModelData:369002}}}] run function shield_hero:level_up/smelting-rope/smelting_rope-4
+execute as @a[scores={smelt=1..,rope_smelt=4},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{shh:1b,CustomModelData:369002}}}] run function shield_hero:level_up/smelting-rope/smelting_rope-5
+execute as @a[scores={smelt=1..,rope_smelt=5},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{shh:1b,CustomModelData:369002}}}] run function shield_hero:level_up/smelting-rope/smelting_rope-6
+execute as @a[scores={smelt=1..,rope_smelt=6},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{shh:1b,CustomModelData:369002}}}] run function shield_hero:level_up/smelting-rope/smelting_rope-7
+execute as @a[scores={smelt=1..,rope_smelt=7},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{shh:1b,CustomModelData:369002}}}] run function shield_hero:level_up/smelting-rope/smelting_rope-8
+execute as @a[scores={smelt=1..,rope_smelt=8},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{shh:1b,CustomModelData:369002}}}] run function shield_hero:level_up/smelting-rope/smelting_rope-9
+execute as @a[scores={smelt=1..,rope_smelt=9},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{shh:1b,CustomModelData:369002}}}] run function shield_hero:level_up/smelting-rope/smelting_rope-10
+execute as @a[scores={smelt=1..,rope_smelt=10},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{shh:1b,CustomModelData:369002}}}] run function shield_hero:level_up/smelting-rope/smelting_rope-11

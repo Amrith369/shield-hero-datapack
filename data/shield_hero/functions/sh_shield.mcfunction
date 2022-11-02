@@ -50,7 +50,10 @@ advancement grant @a[tag=shield,scores={absorb=1..},nbt={Inventory:[{id:"minecra
 #------------Change Shield-----------------
 execute at @a[tag=shield,scores={select=1..}] run tp @e[distance=0..5,type=item,nbt={Item:{id:"minecraft:shield",Count:1b}}] ~ ~ ~
 execute at @a[tag=shield,scores={select=1..}] run data merge entity @e[type=item,limit=1,distance=0..6,nbt={Item:{id:"minecraft:shield",Count:1b}}] {PickupDelay:1,Item:{id:"minecraft:shield",Count:1b}}
-execute as @e[type=item,nbt={Item:{id:"minecraft:shield"}}] run tellraw @a[tag=shield,scores={select=1..}] ["",{"text":"===========","bold":true,"color":"white"},{"text":"\n"},{"text":"Change Shield:","italic":true},{"text":"\n"},{"text":"===========","bold":true,"color":"white"},{"text":"\n"},{"text":"Small Shield","bold":true,"color":"white","clickEvent":{"action":"run_command","value":"/trigger basic_sh add 1"}}]
+execute as @e[type=item,nbt={Item:{id:"minecraft:shield"}}] run tellraw @a[tag=shield,scores={select=1..}] ["",{"text":"===========","bold":true,"color":"white"},{"text":"\n"},{"text":"Change Shield:","italic":true},{"text":"\n"},{"text":"===========","bold":true,"color":"white"},{"text":"\n"},{"text":"Small Shield","bold":true,"color":"white","clickEvent":{"action":"run_command","value":"/trigger shield_small add 1"}}]
+scoreboard players add @a[tag=shield,scores={shield_small=1..}] smallprof 0
+scoreboard players add @a[tag=shield,scores={shield_small=1..}] small_smelt 0
+execute at @a[tag=shield,scores={shield_small=1..}] run particle minecraft:totem_of_undying ^ ^2 ^1 0.1 0.1 0.1 0.01 10
 #-Leaf Shield
 execute at @e[type=item,nbt={Item:{id:"minecraft:shield"}}] run execute at @a[distance=0..4,tag=shield,scores={select=1..}] run tellraw @p[distance=0,advancements={shield_hero:shields/leaf=true}] {"text":"Leaf Shield","bold":true,"color":"green","clickEvent":{"action":"run_command","value":"/trigger shield_leaf add 1"}}
 execute as @a[tag=shield,scores={shield_leaf=1..}] run clear @s shield
@@ -101,28 +104,9 @@ execute as @a[tag=shield,scores={shield_pick=1..,pickprof=500..,pick_smelt=0}] r
 execute as @a[tag=shield,scores={shield_pick=1..,pick_smelt=1..}] run function shield_hero:level_up/pick-smelt
 #-Rope Shield
 execute at @e[type=item,nbt={Item:{id:"minecraft:shield"}}] run execute at @a[distance=0..4,tag=shield,scores={select=1..}] run tellraw @p[distance=0,advancements={shield_hero:shields/rope=true}] {"text":"Rope Shield","bold":true,"color":"dark_green","clickEvent":{"action":"run_command","value":"/trigger shield_rope add 1"}}
-execute as @a[tag=shield,scores={shield_rope=1..}] run clear @s shield
-execute as @a[tag=shield,scores={shield_rope=1..}] run tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
-scoreboard players add @a[tag=shield,scores={shield_rope=1..}] ropeprof 0
-scoreboard players add @a[tag=shield,scores={shield_rope=1..}] rope_smelt 0
 title @a[tag=shield,scores={shield_rope=1..}] title {"text":"\uE370"}
 execute at @a[tag=shield,scores={shield_rope=1..}] run particle minecraft:totem_of_undying ^ ^2 ^1 0.1 0.1 0.1 0.01 10
-execute as @a[tag=shield,scores={shield_rope=1..,ropeprof=0..9,rope_smelt=0}] run give @s minecraft:shield{display:{Name:'{"text":"Rope Shield 0/10 C","color":"gold","bold":true}',Lore:['{"text":"-Abilities Locked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 0"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;1292209216,625492818,-1149681624,283251881],Slot:"mainhand"}]} 1
-execute as @a[tag=shield,scores={shield_rope=1..,ropeprof=10..19,rope_smelt=0}] run give @s minecraft:shield{display:{Name:'{"text":"Rope Shield 0/10 C","color":"gold","bold":true}',Lore:['{"text":"-Abilities Locked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 10"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;1099138174,56508603,-1560721249,-1504844332],Slot:"mainhand"}]} 1
-execute as @a[tag=shield,scores={shield_rope=1..,ropeprof=20..29,rope_smelt=0}] run give @s minecraft:shield{display:{Name:'{"text":"Rope Shield 0/10 C","color":"gold","bold":true}',Lore:['{"text":"-Abilities Locked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 20"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;-1562797768,-1391771020,-1459681447,1116471544],Slot:"mainhand"}]} 1
-execute as @a[tag=shield,scores={shield_rope=1..,ropeprof=30..39,rope_smelt=0}] run give @s minecraft:shield{display:{Name:'{"text":"Rope Shield 0/10 C","color":"gold","bold":true}',Lore:['{"text":"-Abilities Locked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 30"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;1974924367,841893896,-1115192277,-1696663635],Slot:"mainhand"}]} 1
-execute as @a[tag=shield,scores={shield_rope=1..,ropeprof=40..49,rope_smelt=0}] run give @s minecraft:shield{display:{Name:'{"text":"Rope Shield 0/10 C","color":"gold","bold":true}',Lore:['{"text":"-Abilities Locked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 40"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;-101106214,-2012724554,-1129248972,-37260473],Slot:"mainhand"}]} 1
-execute as @a[tag=shield,scores={shield_rope=1..,ropeprof=50..59,rope_smelt=0}] run give @s minecraft:shield{display:{Name:'{"text":"Rope Shield 0/10 C","color":"gold","bold":true}',Lore:['{"text":"-Abilities Locked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 50"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;809185088,-248559132,-2107306740,1959889771],Slot:"mainhand"}]} 1
-execute as @a[tag=shield,scores={shield_rope=1..,ropeprof=60..69,rope_smelt=0}] run give @s minecraft:shield{display:{Name:'{"text":"Rope Shield 0/10 C","color":"gold","bold":true}',Lore:['{"text":"-Abilities Locked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 60"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;93641037,501305160,-1408007652,978151793],Slot:"mainhand"}]} 1
-execute as @a[tag=shield,scores={shield_rope=1..,ropeprof=70..79,rope_smelt=0}] run give @s minecraft:shield{display:{Name:'{"text":"Rope Shield 0/10 C","color":"gold","bold":true}',Lore:['{"text":"-Abilities Locked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 70"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;-1452321837,-1546172944,-1469697305,146429612],Slot:"mainhand"}]} 1
-execute as @a[tag=shield,scores={shield_rope=1..,ropeprof=80..89,rope_smelt=0}] run give @s minecraft:shield{display:{Name:'{"text":"Rope Shield 0/10 C","color":"gold","bold":true}',Lore:['{"text":"-Abilities Locked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 80"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;-1456129398,-330217211,-1712678493,718537475],Slot:"mainhand"}]} 1
-execute as @a[tag=shield,scores={shield_rope=1..,ropeprof=90..99,rope_smelt=0}] run give @s minecraft:shield{display:{Name:'{"text":"Rope Shield 0/10 C","color":"gold","bold":true}',Lore:['{"text":"-Abilities Locked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 90"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;339133032,-1433121971,-1462162313,1120797876],Slot:"mainhand"}]} 1
-execute as @a[tag=shield,scores={shield_rope=1..,ropeprof=100..199,rope_smelt=0}] run give @s minecraft:shield{display:{Name:'{"text":"Rope Shield 0/10 C","color":"gold","bold":true}',Lore:['{"text":"-Abilities Unlocked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 100"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:4,Operation:0,UUID:[I;-1674193601,1191136836,-1407874219,-2062457520],Slot:"mainhand"}]} 1
-execute as @a[tag=shield,scores={shield_rope=1..,ropeprof=200..299,rope_smelt=0}] run give @s minecraft:shield{display:{Name:'{"text":"Rope Shield 0/10 UC","color":"gold","bold":true}',Lore:['{"text":"-Abilities Unlocked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 100"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:4,Operation:0,UUID:[I;-327445207,1303331547,-1483703371,-1109584045],Slot:"mainhand"},{AttributeName:"generic.max_health",Name:"generic.max_health",Amount:2,Operation:0,UUID:[I;-119679978,825509608,-1809598732,-1606085347]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.01,Operation:0,UUID:[I;977068335,-1743566869,-2062851735,658689231]}]} 1
-execute as @a[tag=shield,scores={shield_rope=1..,ropeprof=300..499,rope_smelt=0}] run give @s minecraft:shield{display:{Name:'{"text":"Rope Shield 0/10 R","color":"gold","bold":true}',Lore:['{"text":"-Abilities Unlocked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 100"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:4,Operation:0,UUID:[I;1080543818,2084062237,-1600007535,2030371144],Slot:"mainhand"},{AttributeName:"generic.max_health",Name:"generic.max_health",Amount:4,Operation:0,UUID:[I;1897653747,120343459,-1563199998,1623818426]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.01,Operation:0,UUID:[I;-1381591342,1143623286,-2109741523,800913994]}]} 1
-execute as @a[tag=shield,scores={shield_rope=1..,ropeprof=500..,rope_smelt=0}] run give @s minecraft:shield{display:{Name:'{"text":"Rope Shield 0/10 SR","color":"gold","bold":true}',Lore:['{"text":"-Abilities Unlocked-"}','{"text":"Equip Bonus:","italic":true}','{"text":"Skill: Air Strike Shield"}','{"text":"mastery level: 100"}']},Unbreakable:1b,CustomModelData:369004,AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:4,Operation:0,UUID:[I;-1873293600,955272633,-1256403432,-1575113098],Slot:"mainhand"},{AttributeName:"generic.max_health",Name:"generic.max_health",Amount:8,Operation:0,UUID:[I;-1652670204,-769570525,-1228087803,791795754]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.03,Operation:0,UUID:[I;1650971038,1829653356,-1514366324,418457881]}]} 1
-execute as @a[tag=shield,scores={shield_rope=1..,rope_smelt=1..}] run function shield_hero:level_up/rope-smelt
-#scoreboard players remove @a[tag=shield,advancements={shield_hero:shields/viper=false},scores={shield_rope=1..,sp=1..}] sp 100
+execute as @a[tag=shield,scores={shield_rope=1..}] run function shield_hero:weapons/rope
 #-Pipe Shield
 execute at @e[type=item,nbt={Item:{id:"minecraft:shield"}}] run execute at @a[distance=0..4,tag=shield,scores={select=1..}] run tellraw @p[distance=0,advancements={shield_hero:shields/pipe=true}] {"text":"Pipe Shield","bold":true,"color":"gray","clickEvent":{"action":"run_command","value":"/trigger shield_pipe add 1"}}
 execute as @a[tag=shield,scores={shield_pipe=1..}] run clear @s shield
@@ -352,9 +336,9 @@ execute as @a[tag=shield,scores={shield_wooden=1..,woodenprof=500..,wooden_smelt
 #scoreboard players remove @a[tag=shield,advancements={shield_hero:shields/viper=false},scores={shield_wooden=1..,sp=1..}] sp 100
 execute as @a[tag=shield,scores={shield_wooden=1..,wooden_smelt=1..}] run function shield_hero:level_up/wooden-smelt
 #-Basic Shield
-execute as @a[tag=shield,scores={basic_sh=1..}] run clear @s shield
-execute as @a[tag=shield,scores={basic_sh=1..}] run tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
-execute as @a[tag=shield,scores={basic_sh=1..}] run give @s minecraft:shield{display:{Name:'{"text":"Legendary Shield","color":"gold","bold":true}',Lore:['{"text":"-Abilities Unlocked-","italic":true}','{"text":"Equip Bonus: defense 3"}']},HideFlags:1,Unbreakable:1b,CustomModelData:369001,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUIDLeast:790722,UUIDMost:572480,Slot:"mainhand"}]} 1
+execute as @a[tag=shield,scores={shield_small=1..}] run clear @s shield
+execute as @a[tag=shield,scores={shield_small=1..}] run tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
+execute as @a[tag=shield,scores={shield_small=1..}] run function shield_hero:weapons/small
 #------------Party System--------------------
 execute as @a[tag=shield,scores={party=1..}] run execute at @s run tag @e[distance=1..2] add shield.party
 execute as @a[tag=shield,scores={party=1..}] run execute at @e[tag=shield.party] run tellraw @a[tag=shield,scores={party=1..}] ["",{"text":"[Notice] ","bold":true,"color":"green"},{"selector":"@e[tag=shield.party,limit=1,sort=nearest]","bold":true,"color":"white"},{"text":" Has Joined Your Party!","bold":true,"color":"green"}]
@@ -402,9 +386,10 @@ execute as @a[tag=shield,scores={starCounter=1..}] run function shield_hero:star
 execute as @a[nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369012}}}] run function shield_hero:portal
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369012}}]}] run function shield_hero:portal
 #-Whale Shield
-execute as @a[nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369013}}}] run function shield_hero:whale
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369013}}]}] run function shield_hero:whale
-execute as @a[scores={block=1..,whaleprof=100..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369013}}}] run function shield_hero:abilities/whale-beam
+execute as @a[tag=shield,predicate=shield_hero:whale] run function shield_hero:whale
+execute as @a[tag=shield,predicate=shield_hero:whale-offhand] run function shield_hero:whale
+execute as @a[scores={block=1..,whaleprof=100..},predicate=shield_hero:whale] run function shield_hero:abilities/whale-beam
+execute as @e[tag=sh-wb] run function shield_hero:abilities/heat-beam
 #-Wrath Shield
 execute as @a[nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run function shield_hero:abilities/wrath
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}]}] run function shield_hero:abilities/wrath
@@ -422,6 +407,7 @@ execute as @a[scores={skill-hate-reaction=1..,woodenprof=100..}] run function sh
 execute as @a[nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}}] run function shield_hero:level_up/woodenprof
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:shield",Count:1b,tag:{CustomModelData:369014}}]}] run function shield_hero:level_up/woodenprof
 #SMELT
+execute as @a[scores={smelt=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369001}}}] run function shield_hero:level_up/smelting-small/smelt-id
 execute as @a[scores={smelt=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369002}}}] run function shield_hero:level_up/smelt
 execute as @a[scores={smelt=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369003}}}] run function shield_hero:level_up/smelting-pickax
 execute as @a[scores={smelt=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369004}}}] run function shield_hero:level_up/smelting-rope
@@ -447,7 +433,7 @@ kill @e[tag=aj.maiden,scores={maiden=100..}]
 scoreboard players add @e[tag=aj.blutopher] blood 1
 kill @e[tag=aj.blutopher,scores={blood=100..}]
 scoreboard players set @a[tag=shield,scores={shield_leaf=1..}] shield_leaf 0
-scoreboard players set @a[tag=shield,scores={basic_sh=1..}] basic_sh 0
+scoreboard players set @a[tag=shield,scores={shield_small=1..}] shield_small 0
 scoreboard players set @a[tag=shield,scores={shield_pick=1..}] shield_pick 0
 scoreboard players set @a[tag=shield,scores={shield_rope=1..}] shield_rope 0
 scoreboard players set @a[tag=shield,scores={shield_pipe=1..}] shield_pipe 0
@@ -458,6 +444,7 @@ scoreboard players set @a[tag=shield,scores={shield_wrath=1..}] shield_wrath 0
 scoreboard players set @a[tag=shield,scores={maiden=1..}] maiden 0
 scoreboard players set @a[tag=shield,scores={blood=1..}] blood 0
 scoreboard players set @a[tag=shield,scores={select=1..}] select 0
+scoreboard players set @a[tag=shield,scores={select=2..}] show-status 0
 scoreboard players set @a[tag=shield,scores={shield_soul=1..}] shield_soul 0
 scoreboard players set @a[tag=shield,scores={shield_star=1..}] shield_star 0
 scoreboard players set @a[tag=shield,scores={shield_portal=1..}] shield_portal 0
@@ -470,9 +457,10 @@ scoreboard players enable @a[tag=shield] weapon_copy
 scoreboard players enable @a[tag=shield,advancements={shield_hero:shields/leaf=true}] shield_leaf
 scoreboard players enable @a[tag=shield,advancements={shield_hero:shields/star=true}] shield_star
 scoreboard players enable @a[tag=shield,advancements={shield_hero:shields/pick=true}] shield_pick
-scoreboard players enable @a[tag=shield] basic_sh
+scoreboard players enable @a[tag=shield] shield_small
 scoreboard players enable @a[tag=shield] status
 scoreboard players enable @a[tag=shield] status_all
+scoreboard players enable @a[tag=shield] show-status
 scoreboard players enable @a[tag=shield] absorb
 scoreboard players enable @a[tag=shield] smelt
 scoreboard players enable @a[tag=shield] party

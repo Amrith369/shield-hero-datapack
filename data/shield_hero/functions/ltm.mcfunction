@@ -1,4 +1,5 @@
-execute at @a[tag=shield,scores={ass=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369006}}}] run particle dust 0.000 1.000 0.969 1 ~ ~ ~ 1 0 1 0.03 10 normal
+#execute at @a[tag=shield,scores={ass=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369006}}}] run particle dust 0.000 1.000 0.969 1 ~ ~ ~ 1 0 1 0.03 10 normal
+execute at @a[tag=shield,scores={ass=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369006}}}] positioned ^ ^ ^1.5 run function shield_hero:particles/circle
 execute at @a[tag=shield,scores={ass=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369006}}}] run kill @e[type=potion,distance=0..3]
 execute at @a[tag=shield,scores={ass=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369006}}}] run kill @e[type=vex,distance=0..3]
 execute at @a[tag=shield,scores={ass=1..},nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369006}}}] run kill @e[type=evoker_fangs,distance=0..3]

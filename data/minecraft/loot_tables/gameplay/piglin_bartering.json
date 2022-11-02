@@ -260,6 +260,17 @@
               "tag": "{display:{Name:'{\"text\":\"Siderite Shield\",\"color\":\"dark_aqua\",\"bold\":true}',Lore:['{\"text\":\"-Abilities Locked-\"}','{\"text\":\"Equip Bonus:\"}','{\"text\":\"skill: Shooting Star Shield\"}','{\"text\":\"mastery level: 0\"}']},Unbreakable:0b,CustomModelData:369011,AttributeModifiers:[{AttributeName:\"generic.max_health\",Name:\"generic.max_health\",Amount:6,Operation:0,UUID:[I;1610639633,-1220196460,-1507997410,1965609307],Slot:\"mainhand\"},{AttributeName:\"generic.max_health\",Name:\"generic.max_health\",Amount:6,Operation:0,UUID:[I;440584511,-142192656,-1271897746,392320637],Slot:\"offhand\"},{AttributeName:\"generic.armor_toughness\",Name:\"generic.armor_toughness\",Amount:5,Operation:0,UUID:[I;1701980902,-431929989,-1874369771,2124300379],Slot:\"mainhand\"}]}"
             }
           ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 30,
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Siderite Sword\",\"color\":\"gold\",\"bold\":true}',Lore:['{\"text\":\"-Abilities Locked-\"}','{\"text\":\"equip bonus:\"}','{\"text\":\"skill: Shooting Star Sword\"}']},swh:1b,CustomModelData:3690015,AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:6,Operation:0,UUID:[I;-455555115,1679641992,-1761619034,668937757],Slot:\"mainhand\"},{AttributeName:\"generic.max_health\",Name:\"generic.max_health\",Amount:2,Operation:0,UUID:[I;-210198264,-1206238600,-1180093127,-855528502],Slot:\"mainhand\"},{AttributeName:\"generic.movement_speed\",Name:\"generic.movement_speed\",Amount:0.02,Operation:0,UUID:[I;-173912168,-26130579,-1582449710,-976207972],Slot:\"mainhand\"}]}"
+            }
+          ]
         }
       ]
     }

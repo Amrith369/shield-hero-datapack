@@ -19,7 +19,6 @@ execute at @e[tag=curse_select] run effect give @e[limit=1,distance=0..3,tag=!wr
 execute as @e[tag=selected] run execute at @a[tag=shield,nbt={SelectedItem:{id:"minecraft:shield",Count:1b,tag:{CustomModelData:369009}}}] run summon villager ^ ^.5 ^2 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["skill-select"],ArmorItems:[{},{},{},{id:"minecraft:brick",Count:1b,tag:{CustomModelData:369015}}],ActiveEffects:[{Id:14,Amplifier:1b,Duration:100000,ShowParticles:0b}]}
 scoreboard players add @e[tag=skill-select] counter 1
 execute at @a[scores={maiden=1..},advancements={shield_hero:shields/wrath=true}] run tag @e[tag=selected] add maidenlock
-
 effect give @a[scores={blood=1..},advancements={shield_hero:shields/wrath=true}] nausea 60 6
 effect give @a[scores={blood=1..},advancements={shield_hero:shields/wrath=true}] hunger 600 6
 effect give @a[scores={blood=1..},advancements={shield_hero:shields/wrath=true}] slowness 600 3

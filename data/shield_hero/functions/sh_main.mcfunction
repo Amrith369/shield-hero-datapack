@@ -1,13 +1,17 @@
 #tag Amrith_Erilaz add shield
-execute as @a[tag=shield] run title @s[tag=shield,x_rotation=45..90] actionbar [{"text":"SP: "},{"score":{"name":"@s","objective":"sp"},"bold":"true","color":"green"},{"text":"/300","bold":"true","color":"green"}]
+execute as @a[tag=shield,scores={show-status=1..}] run title @s[tag=shield,x_rotation=45..90] actionbar [{"selector":"@s","color":"#1FA141","bold":true},{"text":" || SP: "},{"score":{"name":"@s","objective":"sp"},"bold":"true","color":"green"},{"text":"/","bold":"true","color":"green"},{"score":{"name":"@s","objective":"sp_max"},"color":"#1FA141"}]
 bossbar remove minecraft:sp
 scoreboard players add @a[tag=shield] sp 0
+scoreboard players set @a[tag=shield,level=0..10] sp_max 200
+scoreboard players set @a[tag=shield,level=11..20] sp_max 300
+scoreboard players set @a[tag=shield,level=21..30] sp_max 400
+scoreboard players set @a[tag=shield,level=31..40] sp_max 500
+scoreboard players set @a[tag=shield,level=41..50] sp_max 600
+scoreboard players set @a[tag=shield,level=51..] sp_max 1000
+execute as @a[tag=shield] if score @s sp < @s sp_max run scoreboard players add @a[tag=shield,scores={sp=..300,shieldcounter=600}] sp 5
 scoreboard players add @a[tag=shield,scores={sp=..300,shieldcounter=600}] sp 5
-scoreboard players add @a[tag=shield,scores={sp=..300,shieldcounter=1200}] sp 5
-scoreboard players add @a[tag=shield,scores={sp=..300,shieldcounter=1800}] sp 5
-scoreboard players add @a[tag=hero,advancements={shield_hero:shields/soul=true},scores={sp=300..400,shieldcounter=1800}] sp 5
 scoreboard players add @a[tag=shield] shieldcounter 1
-scoreboard players set @a[tag=shield,scores={shieldcounter=1800..}] shieldcounter 0
+scoreboard players set @a[tag=shield,scores={shieldcounter=601..}] shieldcounter 0
 effect give @a[tag=mine] haste 2 3 true
 effect clear @a[tag=snake] poison
 execute as @e[tag=aj.maiden] run function shield_hero:abilities/maiden-effects

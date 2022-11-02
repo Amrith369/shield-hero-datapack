@@ -1,0 +1,187 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Small Shield 0/10 C +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "small_smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "smallprof": {
+            "min": 0,
+            "max": 99
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Small Shield 0/10 UC +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "small_smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "smallprof": {
+            "min": 100,
+            "max": 199
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Small Shield 0/10 R +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "small_smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "smallprof": {
+            "min": 200,
+            "max": 299
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Small Shield 0/10 SR +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "small_smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "smallprof": {
+            "min": 300,
+            "max": 499
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Small Shield 0/10 AR +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "small_smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "smallprof": {
+            "min": 500,
+            "max": 999
+          }
+        }
+      }
+    ]
+  }
+]

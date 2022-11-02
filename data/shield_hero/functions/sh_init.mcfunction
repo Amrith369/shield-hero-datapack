@@ -6,6 +6,7 @@ bossbar remove minecraft:sp
 scoreboard objectives add a_coords dummy
 scoreboard objectives add b_coords dummy
 scoreboard objectives add c_coords dummy
+scoreboard objectives add small_smelt dummy
 scoreboard objectives add leaf_smelt dummy
 scoreboard objectives add rope_smelt dummy
 scoreboard objectives add dog_smelt dummy
@@ -19,6 +20,7 @@ scoreboard objectives add viper_smelt dummy
 scoreboard objectives add whale_smelt dummy
 scoreboard objectives add wrath_smelt dummy
 scoreboard objectives add wooden_smelt dummy
+scoreboard objectives add show-status trigger
 scoreboard objectives add craft_sp_potion trigger
 scoreboard objectives add craft_hp_potion trigger
 scoreboard objectives add smelt trigger
@@ -27,6 +29,7 @@ scoreboard objectives add disband trigger
 scoreboard objectives add staroff trigger
 scoreboard objectives add skill-bubble trigger
 scoreboard objectives add sp dummy
+scoreboard objectives add sp_max dummy
 scoreboard objectives add starCounter dummy
 scoreboard objectives add skill-hate-reaction trigger
 scoreboard objectives add shield_leaf trigger
@@ -54,7 +57,7 @@ scoreboard objectives add blood trigger
 scoreboard objectives add shield_soul trigger
 scoreboard objectives add shield_star trigger
 scoreboard objectives add absorb trigger
-scoreboard objectives add basic_sh trigger
+scoreboard objectives add shield_small trigger
 scoreboard objectives add skill-alert trigger
 scoreboard objectives add status trigger
 scoreboard objectives add status_all trigger
@@ -66,6 +69,7 @@ scoreboard objectives add counter dummy
 scoreboard objectives add skillcounter dummy
 scoreboard objectives add shield_ep dummy
 scoreboard objectives add shieldcounter dummy
+scoreboard objectives add smallprof dummy
 scoreboard objectives add leafprof dummy
 scoreboard objectives add portalprof dummy
 scoreboard objectives add whaleprof dummy

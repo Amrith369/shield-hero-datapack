@@ -1,0 +1,332 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "DEF",
+        "amount": 1,
+        "operation": "addition",
+        "id": "cbcfc309-3863-4a86-be76-30f4ac89f320",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "HP",
+        "amount": 0.02,
+        "operation": "multiply_total",
+        "id": "060868bc-d239-4d4d-8b16-4a8df5196cc5",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": 1
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "DEF",
+        "amount": 2,
+        "operation": "addition",
+        "id": "834b9716-3a52-4b01-b3f2-6c201beca7ac",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "HP",
+        "amount": 0.02,
+        "operation": "multiply_total",
+        "id": "f3601887-5fcd-4638-8b19-08907188713a",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": 2
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "DEF",
+        "amount": 3,
+        "operation": "addition",
+        "id": "5336100a-5811-42df-8760-ffd8bf48dfac",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "HP",
+        "amount": 0.02,
+        "operation": "multiply_total",
+        "id": "dd17d73c-80ca-4157-abf5-df7d7bb63389",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": 3
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "DEF",
+        "amount": 4,
+        "operation": "addition",
+        "id": "04f86fb1-a95a-43eb-82b9-e4eb732c3f45",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "HP",
+        "amount": 0.02,
+        "operation": "multiply_total",
+        "id": "3618996e-95fe-4d43-87ba-421b3798c6ad",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": 4
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "DEF",
+        "amount": 5,
+        "operation": "addition",
+        "id": "8f978611-3be7-41ac-b61c-d262b8bbbcaf",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "HP",
+        "amount": 0.02,
+        "operation": "multiply_total",
+        "id": "e8d589fe-c4e8-4022-af64-2f25693708c1",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": 5
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "DEF",
+        "amount": 6,
+        "operation": "addition",
+        "id": "953daa8f-b98b-4f1f-ae6f-a6ae2b68679f",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "HP",
+        "amount": 0.02,
+        "operation": "multiply_total",
+        "id": "7f0fdc50-5a4e-4f56-b0a1-e0315783afdb",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": 6
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "DEF",
+        "amount": 7,
+        "operation": "addition",
+        "id": "68bd6908-a264-4690-9e58-c25b60ca3253",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "HP",
+        "amount": 0.02,
+        "operation": "multiply_total",
+        "id": "d458a47e-4a60-4d91-9855-d36e5c33e0d9",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": 7
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "DEF",
+        "amount": 8,
+        "operation": "addition",
+        "id": "a7e92e91-3028-4f3a-a900-65705d2715b9",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "HP",
+        "amount": 0.02,
+        "operation": "multiply_total",
+        "id": "8195ef5a-d55c-4d83-a714-1d88c829c3f5",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": 8
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "DEF",
+        "amount": 9,
+        "operation": "addition",
+        "id": "9dde0088-0eb6-43b1-a14b-3c43ebb8b6ef",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "HP",
+        "amount": 0.02,
+        "operation": "multiply_total",
+        "id": "dd5da85a-d533-4c39-8f8c-a92df2439e10",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": 9
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "DEF",
+        "amount": 10,
+        "operation": "addition",
+        "id": "24eb66fd-a203-4f44-ab0c-fea9f53df227",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "HP",
+        "amount": 0.02,
+        "operation": "multiply_total",
+        "id": "56423757-e3d5-4d46-a0e9-6f4215170957",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": 10
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "DEF",
+        "amount": 11,
+        "operation": "addition",
+        "id": "ab48652c-5579-400c-8f19-c7cc6f6bef9f",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "HP",
+        "amount": 0.02,
+        "operation": "multiply_total",
+        "id": "92c04528-7b1c-45a2-aca1-4ba9c62ccee7",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "small_smelt": 11
+        }
+      }
+    ]
+  }
+]
